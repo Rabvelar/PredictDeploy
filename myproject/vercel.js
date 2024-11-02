@@ -1,10 +1,15 @@
-"routes": [
-  {
-    "src": "/static/(.*)",
-    "dest": "/myproject/static/$1"
-  },
-  {
-    "src": "/(.*)",
-    "dest": "myproject/wsgi.py"
-  }
-]
+{
+  "version": 3,
+  "builds": [
+    {
+      "src": "myproject/wsgi.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "myproject/wsgi.py"
+    }
+  ]
+}
