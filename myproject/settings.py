@@ -15,7 +15,7 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 
 DEBUG=True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
 
 
 # Application definition
